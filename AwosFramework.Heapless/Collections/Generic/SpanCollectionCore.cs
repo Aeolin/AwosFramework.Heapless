@@ -1,5 +1,4 @@
-﻿using AwosFramework.Heapless.Utlis;
-using System;
+﻿using System;
 using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,7 +43,6 @@ namespace AwosFramework.Heapless.Collections.Generic
 				throw new IndexOutOfRangeException();
 		}
 
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void SetCount(int count)
 		{
 			if (count < 0 || count > _span.Length)

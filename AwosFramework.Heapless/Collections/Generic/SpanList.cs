@@ -12,7 +12,7 @@ namespace AwosFramework.Heapless.Collections.Generic
 	public ref struct SpanList<T> : IList<T>, ISpanCollection<T>
 	{
 		private readonly IEqualityComparer<T> _comparer;
-		private readonly SpanCollectionCore<T> _core;
+		private SpanCollectionCore<T> _core;
 
 		public bool IsReadOnly => false;
 		public bool IsExpandable => _core.IsExpandable;

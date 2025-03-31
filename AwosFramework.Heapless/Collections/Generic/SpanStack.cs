@@ -10,7 +10,7 @@ namespace AwosFramework.Heapless.Collections.Generic
 {
 	public ref struct SpanStack<T> : ISpanCollection<T>
 	{
-		private readonly SpanCollectionCore<T> _core;
+		private SpanCollectionCore<T> _core;
 		private readonly IEqualityComparer<T> _comparer;
 
 		public SpanStack(MemoryPool<T> memoryPool, int capacity = SpanCollectionCore<T>.INITIAL_CAPACITY, IEqualityComparer<T>? equality = null)

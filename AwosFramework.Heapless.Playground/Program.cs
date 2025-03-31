@@ -9,3 +9,10 @@ foreach(var item in list)
 {
 	Console.WriteLine(item);
 }
+
+var stack = new SpanStack<int>(span);
+stack.Push(1);
+stack.Push(3);
+stack.Push(5);
+stack.Push(7);
+Console.WriteLine(stack.Pop());
