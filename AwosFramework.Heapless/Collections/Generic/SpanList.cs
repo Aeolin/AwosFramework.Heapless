@@ -116,8 +116,7 @@ namespace AwosFramework.Heapless.Collections.Generic
 			if (array.Length - arrayIndex < _core.Count)
 				throw new ArgumentException("Array is too small", nameof(array));
 
-			Span<T> array_span = array;
-			_core.ReadAccess.CopyTo(array_span.Slice(arrayIndex));
+			_core.ReadAccess.CopyTo(array.AsSpan(arrayIndex));
 		}
 
 		public bool Remove(T item)

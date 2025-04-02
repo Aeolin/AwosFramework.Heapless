@@ -110,7 +110,7 @@ namespace AwosFramework.Heapless.Collections.Generic
 
 	
 		public ReadOnlySpan<T> ReadAccess { [MethodImpl(MethodImplOptions.AggressiveInlining)] get => _span.Slice(0, Count); }
-		public Span<T> WriteAccess { [MethodImpl(MethodImplOptions.AggressiveInlining)] get => _span; }
+		public Span<T> WriteAccess { [MethodImpl(MethodImplOptions.AggressiveInlining)] get => _span.Slice(0, Count); }
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] 
 		public T[] ToArray() => ReadAccess.Slice(0, Count).ToArray();

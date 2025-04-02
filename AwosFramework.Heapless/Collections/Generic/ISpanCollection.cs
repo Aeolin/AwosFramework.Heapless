@@ -8,6 +8,7 @@ namespace AwosFramework.Heapless.Collections.Generic
 {
 	public interface ISpanCollection<T> : ICollection<T>, ISpanCollectionCore<T>
 	{
+		public int IndexOf(T item);
 		public ref T ItemAt(int index);
 	}
 }
